@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <!--Google icon-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    >
+    <!--Google font: Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Scheer Drone Services</title>
+  </head>
+  <body>
+    <!--HEADER-->
+    <header>
+      <!--Nav Bar-->
+      <nav>
+        <div class="nav-bar">
+          <div class="top-bar_container">
+            <div class="logo_container">
+              <a href="index.php" class="logo-link">
+                <img
+                  class="nav-logo"
+                  src="images/business-icon_2.png"
+                  alt="Logo of a drone."
+                  width="100"
+                >
+              </a>
+            </div>
+            <span
+              onclick="displayMenu()"
+              id="mobile-menu-icon"
+              class="material-symbols-outlined"
+              >menu</span
+            >
+          </div>
+          <div id="nav-menu" class="nav-buttons">
+            <a class="nav-link" href="index.php#services">Services</a>
+            <a class="nav-link" href="videos.html">Video</a>
+            <a class="nav-link" href="">Photography</a>
+            <a class="nav-link" href="">About Us</a>
+            <a class="nav-link" href="index.php#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <div class="nav-buff"></div>
+    </header>
+
+
+
+
+    <!--MAIN SECTION-->
+    <main>
+      <!--INFO SECTION-->
+      <section id="services" class="main-info_section">
+        <div class="selector-header">
+          <h2 class="main-heading">Video&nbsp;Portfolio</h2>
+          <select class="selector_dropdown">
+            <option>All</option>
+            <option>Event</option>
+            <option>Promotional</option>
+            <option>Cinema</option>
+          </select>
+          <div class="selectors_container">
+            <button id="selector-default" class="selector" onclick="selectBGColor(this)">All</button>
+            <button class="selector" onclick="selectBGColor(this)">Event</button>
+            <button class="selector" onclick="selectBGColor(this)">Promotional</button>
+            <button class="selector" onclick="selectBGColor(this)">Cinema</button>
+          </div>
+        </div>
+        <article class="service-block">
+
+        </article>
+      </section>
+    </main>
+
+
+
+    <!--FOOTER-->
+    <footer>
+      <hr class="gap">
+      <!--contactbox-->
+      <div class="contact-info-box">
+        <p><span class="contact-info-label">Email:</span><br>scheerdroneservices@gmail.com</p>
+        <p><span class="contact-info-label">Phone:</span><br>(913) 424-8438</p>
+      </div>
+      <!--socialbox-->
+      <div class="socialbox">
+        <h3 class="social-heading">Follow Us</h3>
+        <div class="icon_container">
+          <a href="https://www.facebook.com" target="_blank"><img class="social-icon" src="images/social_icons/Facebook_icon.png" alt="Facebook icon." width="50"></a>
+          <a href="https://www.instagram.com" target="_blank"><img class="social-icon" src="images/social_icons/Instagram_icon.png" alt="Instagram icon." width="50"></a>
+          <a href="https://www.twitter.com" target="_blank"><img class="social-icon" src="images/social_icons/X_icon.png" alt="X(Twitter) icon" width="50"></a>
+          <a href="https://www.snapchat.com" target="_blank"><img class="social-icon" src="images/social_icons/Snapchat_icon.png" alt="Snapchat icon" width="50"></a>
+          <a href="https://www.youtube.com" target="_blank"><img class="social-icon" id="youtube-icon" src="images/social_icons/YouTube_icon.png" alt="YouTube icon." width="50"></a>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+      <!--COPYRIGHT-->
+      <p class="copyright">&copy;Scheer Drone Services 2023</p>
+    </footer>
+    <script src="scripts/scripts_nav.js"></script>
+    <script src="scripts/scripts_videos.js"></script>
+  </body>
+</html>
