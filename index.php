@@ -28,7 +28,7 @@
               <a href="index.php" class="logo-link">
                 <img
                   class="nav-logo"
-                  src="images/business-icon_2.png"
+                  src="images/LOGO_icon.png"
                   alt="Logo of a drone."
                   width="100"
                 >
