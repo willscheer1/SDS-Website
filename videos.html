@@ -60,18 +60,20 @@
       <section id="services" class="main-info_section">
         <div class="selector-header">
           <h2 class="main-heading">Video&nbsp;Portfolio</h2>
-          <select class="selector_dropdown">
-            <option>All</option>
-            <option>Event</option>
-            <option>Promotional</option>
-            <option>Cinema</option>
+          <select id="selector-dropdown" class="selector_dropdown" onchange="select(this.options[this.selectedIndex])">
+            <option value="All">All</option>
+            <option value="All">Event</option>
+            <option value="All">Promotional</option>
+            <option value="All">Cinema</option>
           </select>
           <div class="selectors_container">
-            <button id="selector-default" class="selector" onclick="selectBGColor(this)">All</button>
-            <button class="selector" onclick="selectBGColor(this)">Event</button>
-            <button class="selector" onclick="selectBGColor(this)">Promotional</button>
-            <button class="selector" onclick="selectBGColor(this)">Cinema</button>
+            <button id="selector-default" class="selector" onclick="selectBGColor(this), select(this)">All</button>
+            <button class="selector" onclick="selectBGColor(this), select(this)">Event</button>
+            <button class="selector" onclick="selectBGColor(this), select(this)">Promotional</button>
+            <button class="selector" onclick="selectBGColor(this), select(this)">Cinema</button>
           </div>
+        </div>
+        <div id="video-grid" class="video-grid">
         </div>
       </section>
     </main>
