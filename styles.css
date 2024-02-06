@@ -23,6 +23,7 @@ body {
   font-size: 100%;
   box-sizing: border-box;
   overflow-y: auto;
+  overflow-x: hidden; /*added*/
 }
 
 /* NAV BAR AND MENU ***********************/
@@ -380,6 +381,10 @@ body {
   cursor: pointer;
 }
 
+.submit-button:hover {
+  background-color:#6182a1;
+}
+
 .char-count {
   width: fit-content;
   margin: 3px;
@@ -427,7 +432,6 @@ body {
   color: #fff;
   font-size: 1.4em;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 .selector {
@@ -468,12 +472,64 @@ body {
   aspect-ratio: 1 / 0.6;
 }
 
+.video-container:hover .play-button {
+  width: 30%;
+}
+
 .play-button {
   position: relative;
   width: 25%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.media-backdrop {
+  position: fixed;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  min-width: 278px;
+  height: calc(100vh - 85px);
+  min-height: 190px;
+  background-color: rgba(34, 32, 32, 90%);
+}
+
+.video-box {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 90%;
+  min-width: 225px;
+  max-height: 80%;
+  aspect-ratio: 16/9;
+  box-shadow: 0px 0px 15px 15px #000;
+  margin-top: 35px;
+}
+
+.video-player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.x-out {
+  width: 5%;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.x-out:hover {
+  width: 6%;
+  top: 0.5%;
+  right: 0.5%;
 }
 
 /* ############################################################ */
@@ -543,18 +599,6 @@ body {
     text-shadow: 0 0 0;
   }
 }
-
-/* SCREEN SIZE > 800px */
-@media screen and (min-width: 800px) {
-  .submit-button:hover {
-    background-color:#6182a1;
-  }
-
-  .video-container:hover .play-button {
-    width: 30%;
-  }
-}
-
 
 /* SCREEN SIZE < 1000px ***************************/
 @media screen and (max-width: 1000px) {
@@ -673,7 +717,6 @@ body {
     text-indent: 1em;
     line-height: 1.5em;
   }
-
 }
 
 /* SCREEN < 800px */

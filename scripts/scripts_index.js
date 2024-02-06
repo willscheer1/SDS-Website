@@ -1,16 +1,16 @@
 
 /* Phone number input formatting */
-IMask(document.getElementById('phone'), {
+IMask(document.getElementById("phone"), {
     mask: "(000) 000-0000"
 });
 
 /* Input date restriction:  >= current date */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     // Get the current date in the format "YYYY-MM-DD"
-    const currentDate = new Date().toISOString().split('T')[0];
+    const currentDate = new Date().toISOString().split("T")[0];
 
     // Set the min attribute of the date input to the current date
-    document.getElementById('date').setAttribute('min', currentDate);
+    document.getElementById("date").setAttribute("min", currentDate);
 });
 
 /* Character counters */
