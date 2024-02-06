@@ -13,13 +13,71 @@ function selectBGColor(target) {
     });
 }
 
+// Closes the video display if user clicks on the backdrop
+function closeMedia(event) {
+    if (!event.target.classList.contains("video-player")) {
+        document.getElementById("mediaBackdrop").remove();
+        document.body.style.overflowY = "auto";
+    }
+}
+
+// Display video player
+function playVideo(video, thumbnail) {
+    if (document.querySelector("media-backdrop")) {
+        document.getElementById("mediaBackdrop").remove();
+    }
+    // Create backdrop
+    const backdrop = document.createElement("div");
+    backdrop.classList.add("media-backdrop");
+    backdrop.setAttribute("id", "mediaBackdrop");
+    backdrop.setAttribute("onclick", "closeMedia(event)");
+
+    // Create video box
+    const videoBox = document.createElement("div");
+    videoBox.classList.add("video-box");
+    // Create video player
+    const videoPlayer = document.createElement("video");
+    videoPlayer.classList.add("video-player");
+    videoPlayer.controls = true;
+    videoPlayer.autoplay = true;
+    videoPlayer.setAttribute("poster", thumbnail);
+    // Create video source
+    const source = document.createElement("source");
+    source.src = video;
+    source.type = "video/mp4";
+    // Create X out
+    const xOut = document.createElement("img");
+    xOut.classList.add("x-out");
+    xOut.src = "images/xOut.svg";
+
+    // Stack elements
+    videoPlayer.appendChild(source);
+    videoBox.appendChild(videoPlayer);
+    videoBox.appendChild(xOut);
+    backdrop.appendChild(videoBox);
+
+    // Display player
+    document.getElementById("videos").appendChild(backdrop);
+
+    // Display poster on video end
+    videoPlayer.addEventListener("ended", function() {
+        videoPlayer.autoplay = false;
+        videoPlayer.currentTime = 0.0;
+    })
+
+    document.body.style.overflowY = "hidden";
+}
+
 // Param: path to background image / video file
 function createVideoThumbnail(thumbnail, video) {
+    // Create container
     const container = document.createElement("div");
     container.classList.add("media-container");
     container.classList.add("video-container");
+    container.setAttribute("onclick", "playVideo('" + video + "', '" + thumbnail + "')");
     container.style.backgroundImage = "url(" + thumbnail + ")";
 
+    // Create play button
     const playButton = document.createElement("img");
     playButton.src = "images/play-button.svg";
     playButton.classList.add("play-button");
@@ -144,11 +202,16 @@ function setDropdown(target) {
 
 // Display videos based on selector
 function select(target) {
+    // Reset grid
     clearContainer("video-grid");
+
+    // Fill grid
     videos = getVideos(target.textContent);
     videos.forEach(function(video, thumbnail) {
         createVideoThumbnail(video, thumbnail);
     })
+
+    // Adjust mobile dropdown
     setDropdown(target);
 }
 
@@ -156,4 +219,3 @@ function select(target) {
 document.addEventListener("DOMContentLoaded", function() {
     select(document.getElementById("selector-default"));
 });
-
