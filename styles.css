@@ -408,7 +408,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -420,6 +420,7 @@ body {
 .selector_dropdown {
   display: none;
   width: 40%;
+  min-width: 137px;
   height: 50px;
   text-align: center;
   background-color: #636060;
@@ -445,12 +446,35 @@ body {
   background-color: #2f7bc2;
 }
 
+.video-grid {
+  margin-top: max(7%, 50px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 400px));
+  column-gap: 20px;
+  row-gap: 40px;
+  justify-content: center;
+}
 
+.media-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 0px #222020;
+}
 
+.video-container {
+  min-width: 225px;
+  max-width: 400px;
+  aspect-ratio: 1 / 0.6;
+}
 
-
-
-
+.play-button {
+  position: relative;
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* ############################################################ */
 
@@ -525,8 +549,11 @@ body {
   .submit-button:hover {
     background-color:#6182a1;
   }
-}
 
+  .video-container:hover .play-button {
+    width: 30%;
+  }
+}
 
 
 /* SCREEN SIZE < 1000px ***************************/
