@@ -44,7 +44,7 @@
           <div id="nav-menu" class="nav-buttons">
             <a class="nav-link" href="index.php#services">Services</a>
             <a class="nav-link" href="videos.html">Video</a>
-            <a class="nav-link" href="">Photography</a>
+            <a class="nav-link" href="photos.html">Photography</a>
             <a class="nav-link" href="aboutus.html">About Us</a>
             <a class="nav-link" href="index.php#contact">Contact Us</a>
           </div>
