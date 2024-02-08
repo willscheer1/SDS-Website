@@ -570,7 +570,7 @@ body {
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  margin-bottom: max(7vw, 50px);
+  margin-bottom: max(8vw, 70px);
 }
 
 .au-small-box {
@@ -584,6 +584,7 @@ body {
 .au-heading {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
+  font-size: 1.2em;
 }
 
 .au-text {
@@ -595,6 +596,7 @@ body {
 .au-footer-box {
   margin: 0 auto;
   max-width: 1000px;
+  font-size: 1.2em;
 }
 
 
@@ -922,16 +924,16 @@ body {
     font-size: 1em;
   }
 
-  .au-welcome-box {
+  .au-welcome-box, .au-footer-box {
     font-size: 1em;
-  }
-
-  .larger-text {
-    font-size: 1.3em;
   }
 
   .au-small-box {
     width: 100%;
+  }
+
+  .larger-text {
+    font-size: 1.3em;
   }
 }
 
