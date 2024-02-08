@@ -45,7 +45,7 @@
             <a class="nav-link" href="index.php#services">Services</a>
             <a class="nav-link" href="videos.html">Video</a>
             <a class="nav-link" href="">Photography</a>
-            <a class="nav-link" href="">About Us</a>
+            <a class="nav-link" href="aboutus.html">About Us</a>
             <a class="nav-link" href="index.php#contact">Contact Us</a>
           </div>
         </div>
@@ -74,7 +74,7 @@
       </section>
       <!--INFO SECTION-->
       <section id="services" class="main-info_section">
-        <h2 class="main-heading">Our Services</h2>
+        <h2 class="main-heading text-center">Our Services</h2>
         <!--EVENT VIDEOGRAPHY-->
         <article class="service-block">
           <!--Image-->
@@ -322,8 +322,8 @@
       ?>
       <!--CONTACT US FORM-->
       <section id="contact" class="contact-us_section">
-        <h2 id="contact-head" class="main-heading">Contact Us</h2>
-        <p id="contact-desc" class="article-text">Learn more about our services or inquire about a scheduling a session.<br>
+        <h2 id="contact-head" class="main-heading text-center">Contact Us</h2>
+        <p id="contact-desc" class="article-text">Learn more about our services or inquire about scheduling a session.<br>
           <span id="form-message" class=error-message><?php echo $formErrorMessage; ?></span>
         </p>
         <form id="contact-form" name="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  novalidate>
