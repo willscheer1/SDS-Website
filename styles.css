@@ -23,7 +23,7 @@ body {
   font-size: 100%;
   box-sizing: border-box;
   overflow-y: auto;
-  overflow-x: hidden; /*added*/
+  overflow-x: hidden;
 }
 
 /* NAV BAR AND MENU ***********************/
@@ -72,7 +72,7 @@ body {
 .nav-link {
   width: 8vw;
   height: 100%;
-  min-height: 60px; /*added*/
+  min-height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,6 @@ body {
 }
 
 .main-heading {
-  text-align: center;
   font-size: max(2.5vw, 1.8em);
   font-family: 'Montserrat', sans-serif;
   color: #222020;
@@ -204,10 +203,6 @@ body {
   color: #f3f0f0;
   padding: 1% 3%;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.inc-word-space {
-  word-spacing: 0.2em;
 }
 
 .article-text {
@@ -260,14 +255,6 @@ body {
 .heading-right {
   /* path: bottom-left -> top-left -> top-right -> bottom-right */
   clip-path: polygon(3% 100%, 0 0, 100% 0, 100% 100%);
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .img-right {
@@ -534,6 +521,96 @@ body {
 
 /* ############################################################ */
 
+/* ##################### ABOUT US ############################# */
+
+.au-page {
+  padding: 0 2%;
+  margin: 2% 0;
+}
+
+.au-container {
+  background-color: #6182a1;
+  width: 100%;
+  height: fit-content;
+  padding: 6%;
+  color: #f3f0f0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.au-header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: max(2vw, 30px);
+  margin-bottom: max(7vw, 50px);
+}
+
+.au-welcome-box {
+  width: 50%;
+  margin: 0;
+  text-indent: 2em;
+  font-size: 1.2em;
+  line-height: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+
+.au-welcome-box p {
+  margin: 0;
+}
+
+.au-logo {
+  max-width: 45%;
+  min-width: 200px;
+}
+
+.au-small-box_container {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  margin-bottom: max(7vw, 50px);
+}
+
+.au-small-box {
+  background-color: #42576B;
+  width: 30%;
+  padding: max(3%, 15px);
+  box-sizing: border-box;
+  box-shadow: 5px 5px #222020;
+}
+
+.au-heading {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+.au-text {
+  font-family: 'Montserrat', sans-serif;
+  text-indent: 2em;
+  line-height: 1.5em;
+}
+
+.au-footer-box {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################################################# */
+
 /* FOOTER *****************************************/
 
 .gap {
@@ -586,6 +663,46 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ####################### Utility ###################### */
+.inc-word-space {
+  word-spacing: 0.2em;
+}
+
+.larger-text {
+  font-size: 1.5em;
+}
+
+.smaller-text {
+  font-size: 0.8em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.no-indent {
+  text-indent: 0;
+}
+
+.text-link:link, .text-link:visited, .text-link:active {
+  color: inherit;
+}
+
+
+/* #################################################### */
+
 /* SCREEN SIZE > 1000px */
 @media screen and (min-width: 1000px) {
   .grab-box:hover {
@@ -597,6 +714,20 @@ body {
     background-color: #f3f0f0;
     color:#222020;
     text-shadow: 0 0 0;
+  }
+}
+
+/* SCREEN SIZE < 1200px */
+@media screen and (max-width: 1200px) {
+
+  .au-small-box_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .au-small-box {
+    width: 90%;
   }
 }
 
@@ -685,7 +816,7 @@ body {
   /* MAIN SECTION **********************/
 
   .service-block {
-    height: min-content;
+    min-height: min-content;
     display: block;
     padding: 7% 0;
   }
@@ -710,12 +841,27 @@ body {
     text-align: center;
     margin-bottom: 6%;
     clip-path: polygon(0 100%, 3% 0, 97% 0, 100% 100%);
+    padding: 1% 5%;
   }
 
   .article-text {
     text-align: left;
     text-indent: 1em;
     line-height: 1.5em;
+  }
+}
+
+/* SCREEN < 840px */
+@media screen and (max-width: 840px) {
+
+  .au-header-box {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .au-welcome-box {
+    order: 2;
+    width: 100%;
   }
 }
 
@@ -769,8 +915,29 @@ body {
   }
 }
 
+/* SCREEN < 405px */
+@media screen and (max-width: 405px) {
+
+  .article-text {
+    font-size: 1em;
+  }
+
+  .au-welcome-box {
+    font-size: 1em;
+  }
+
+  .larger-text {
+    font-size: 1.3em;
+  }
+
+  .au-small-box {
+    width: 100%;
+  }
+}
+
 /* SCREEN < 278px */
 @media screen and (max-width: 278px) {
+
   body {
     overflow-x: auto;
   }
