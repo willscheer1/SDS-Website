@@ -24,13 +24,13 @@
       <nav>
         <div class="nav-bar">
           <div class="top-bar_container">
-            <div class="logo_container">
-              <a href="index.php" class="logo-link">
+            <div>
+              <a href="index.php">
                 <img
                   class="nav-logo"
                   src="images/LOGO_icon.png"
                   alt="Logo of a drone."
-                  width="100"
+                  width="200"
                 >
               </a>
             </div>
@@ -55,7 +55,7 @@
     <!--MAIN SECTION-->
     <main>
       <!--HIGHLIGHT SECTION-->
-      <section class="highlight_section">
+      <section>
         <div id="feature-backdrop" class="feature-backdrop">
           <video id="feature-video" width="420"
             autoplay
@@ -72,13 +72,13 @@
           </div>
         </div>
       </section>
-      <!--INFO SECTION-->
-      <section id="services" class="main-info_section">
+      <!--SERVICE SECTION-->
+      <section id="services" class="main-info_section scroll-buffer">
         <h2 class="main-heading text-center">Our Services</h2>
         <!--EVENT VIDEOGRAPHY-->
         <article class="service-block">
           <!--Image-->
-          <div id="event-img" class="service-img_container order2 img-right"></div>
+          <div id="event-img" class="service-img_container order2 img-right" title="Aerial view of a stage and crowd during a concert"></div>
           <!--Text-->
           <div class="service-text_container order1">
             <h3 class="article-heading heading-left inc-word-space">Event Videography</h3>
@@ -95,7 +95,7 @@
         <!--PROMOTIONAL VIDEO-->
         <article class="service-block">
           <!--Image-->
-          <div id="promotional-img" class="service-img_container order1 img-left"></div>
+          <div id="promotional-img" class="service-img_container order1 img-left" title="Aerial view of a city skyscrapers"></div>
           <!--Text-->
           <div class="service-text_container order2 text-right">
             <h3 class="article-heading heading-right inc-word-space">Promotional Videos</h3>
@@ -113,7 +113,7 @@
         <!--REAL ESTATE PHOTOGRAPHY-->
         <article class="service-block">
           <!--Image-->
-          <div id="realEstate-img" class="service-img_container order2 img-right">
+          <div id="realEstate-img" class="service-img_container order2 img-right" title="Aerial view of a tropical neighborhood">
           </div>
           <!--Text-->
           <div class="service-text_container order1">
@@ -129,7 +129,7 @@
         <!--CINEMATOGRAPHY-->
         <article class="service-block">
           <!--Image-->
-          <div id="cinematography-img" class="service-img_container order1 img-left"></div>
+          <div id="cinematography-img" class="service-img_container order1 img-left" title="Breathtaking view of a snowy mountain range surrounding a peaceful lake at sunset"></div>
           <!--Text-->
           <div class="service-text_container order2 text-right">
             <h3 class="article-heading heading-right">Cinematography</h3>
@@ -321,7 +321,7 @@
         }
       ?>
       <!--CONTACT US FORM-->
-      <section id="contact" class="contact-us_section">
+      <section id="contact" class="contact-us_section scroll-buffer">
         <h2 id="contact-head" class="main-heading text-center">Contact Us</h2>
         <p id="contact-desc" class="article-text">Learn more about our services or inquire about scheduling a session.<br>
           <span id="form-message" class=error-message><?php echo $formErrorMessage; ?></span>
@@ -329,7 +329,7 @@
         <form id="contact-form" name="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"  novalidate>
           <div class="form_container">
             <!--first name-->
-            <div class="input-group">
+            <div>
               <label for="fname" class="input-heading">First Name<span class="required"> *</span><span class="error-message"><?php echo $fnameError; ?></span></label><br>
               <input type="text" id="fname" name="fname" class="input-box text-box <?php if($fnameError){echo "error-box";} ?>"
                 maxlength="20"
@@ -339,7 +339,7 @@
               <p class="char-count"><span id="fname_count">0</span> of 20 Max Characters</p>
             </div>
             <!--last name-->
-            <div class="input-group">
+            <div>
               <label for="lname" class="input-heading">Last Name<span class="required"> *</span><span class="error-message"><?php echo $lnameError; ?></span></label><br>
               <input type="text" id="lname" name="lname" class="input-box text-box <?php if($lnameError){echo "error-box";} ?>"
                 maxlength="20"
@@ -349,7 +349,7 @@
               <p class="char-count"><span id="lname_count">0</span> of 20 Max Characters</p>
             </div>
             <!--email-->
-            <div class="input-group">
+            <div>
               <label for="email" class="input-heading">Email<span class="required"> *</span><span class="error-message"><?php echo $emailError ?></span></label><br>
               <input type="email" id="email" name="email" class="input-box text-box <?php if($emailError){echo "error-box";} ?>"
                 maxlength="100"
@@ -358,7 +358,7 @@
               >
             </div>
             <!--phone-->
-            <div class="input-group">
+            <div>
               <label for="phone" class="input-heading">Phone Number<span class="required"> *</span><span class="error-message"><?php echo $phoneError ?></span></label><br>
               <input type="text" id="phone" name="phone" class="input-box text-box <?php if($phoneError){echo "error-box";} ?>"
                 placeholder="(xxx) xxx-xxxx"
@@ -366,7 +366,7 @@
               >
             </div>
             <!--company-->
-            <div class="input-group">
+            <div>
               <label for="company" class="input-heading">Company</label><br>
               <input type="text" id="company" name="company" class="input-box text-box"
                 maxlength="100"
@@ -375,7 +375,7 @@
               >
             </div>
             <!--location(city)-->
-            <div class="input-group">
+            <div>
               <label for="location" class="input-heading">Where Will The Services Be Performed?</label><br>
               <input type="text" id="location" name="location" class="input-box text-box"
                 placeholder="City, State"
@@ -385,7 +385,7 @@
               >
             </div>
             <!--service-->
-            <div class="input-group">
+            <div>
               <label for="service" class="input-heading">Requested Service<span class="required"> *</span><span class="error-message"><?php echo $serviceError ?></span></label><br>
               <select id="service" name="service" class="input-box select-box <?php if($serviceError){echo "error-box";} ?>">
                 <option value="">- Select a Service -</option>
@@ -396,12 +396,12 @@
               </select>
             </div>
             <!--date-->
-            <div class="input-group">
+            <div>
               <label for="date" class="input-heading">Desired Date For Service<span class="error-message"><?php echo $dateError ?></span></label><br>
               <input type="date" id="date" name="date" class="input-box select-box <?php if($dateError){echo "error-box";}?>" value="<?php echo $date ?>">
             </div>
             <!--textbox-->
-            <div class="input-group span2">
+            <div class="span2">
               <label for="textField" class="input-heading">How can we help you?<span class="required"> *</span><span class="error-message"><?php echo $messageError ?></span></label><br>
               <textarea id="textField" name="message" class="input-box text-field <?php if($messageError){echo "error-box";} ?>"
                 maxlength="1500"
