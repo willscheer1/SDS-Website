@@ -431,7 +431,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(225px, 400px));
   column-gap: 20px;
   row-gap: 40px;
-  justify-content: center;
+  justify-content:space-evenly;
 }
 
 .media-container {
@@ -464,6 +464,7 @@ body {
   top: 85px;
   left: 0;
   width: 100%;
+  overflow: auto; /*added*/
   min-width: 278px;
   height: calc(100vh - 85px);
   min-height: 190px;
@@ -496,27 +497,58 @@ body {
   top: 1%;
   right: 1%;
   z-index: 9999;
-  width: 5%;
+  width: 48px;
   aspect-ratio: 1 / 1;
   cursor: pointer;
 }
 
 .x-out:hover {
-  top: 0.5%;
-  right: 0.5%;
-  width: 6%;
+  top: 0.6%;
+  right: 0.6%;
+  /* width: 6%; */
+  width: 52px;
 }
 
 
 /* ##################### PHOTOS PAGE ########################### */
 
+.photo-grid {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 25px;
+  justify-content: center;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 
+.portfolio-photo {
+  max-width: 100%;
+  min-width: 225px;
+}
 
+.showcase-container {
+  position: relative;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 50px;
+}
 
-
-
-
+.showcase-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  min-width: 250px;
+}
 
 /* ##################### ABOUT US PAGE ######################### */
 
@@ -651,6 +683,10 @@ body {
 
 
 /* ####################### Utility ###################### */
+.clear {
+  clear: both;
+}
+
 .inc-word-space {
   word-spacing: 0.2em;
 }
