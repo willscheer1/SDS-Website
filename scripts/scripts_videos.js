@@ -68,6 +68,7 @@ function playVideo(video, thumbnail) {
     document.body.style.overflowY = "hidden";
 }
 
+// Creates and displays thumbnails to page
 // Param: path to background image / video file
 function createVideoThumbnail(thumbnail, video) {
     // Create container
@@ -83,6 +84,7 @@ function createVideoThumbnail(thumbnail, video) {
     playButton.classList.add("play-button");
     container.appendChild(playButton);
 
+    // Display thumbnails
     document.getElementById("video-grid").appendChild(container);
 }
 
