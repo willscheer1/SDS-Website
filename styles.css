@@ -468,6 +468,7 @@ body {
   min-width: 278px;
   height: calc(100vh - 85px);
   min-height: 190px;
+  background-color: rgba(34, 32, 32, 95%);
 }
 
 .video-box {
