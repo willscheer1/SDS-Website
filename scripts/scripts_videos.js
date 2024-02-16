@@ -40,6 +40,7 @@ function playVideo(video, thumbnail) {
     videoPlayer.classList.add("video-player");
     videoPlayer.controls = true;
     videoPlayer.autoplay = true;
+    videoPlayer.playsInline = true;
     videoPlayer.setAttribute("poster", thumbnail);
     // Create video source
     const source = document.createElement("source");
@@ -47,7 +48,7 @@ function playVideo(video, thumbnail) {
     source.type = "video/mp4";
     // Create X out
     const xOut = document.createElement("img");
-    xOut.classList.add("x-out");
+    xOut.classList.add("x-out_bottom");
     xOut.src = "images/xOut.svg";
 
     // Stack elements
