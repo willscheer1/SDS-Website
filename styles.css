@@ -48,7 +48,9 @@ body {
   content: '';
   position: absolute;
   z-index: -1;
-  width: 100%;
+  /* width: 100%; */
+  left: 0; /*added*/
+  right: 0; /*added*/
   height: 100%;
   -webkit-backdrop-filter: blur(15px) !important;
   backdrop-filter: blur(15px);
@@ -481,6 +483,7 @@ body {
   max-height: 80%;
   aspect-ratio: 16/9;
   margin-top: 35px;
+  margin-bottom: 110px;
   box-shadow: 0px 0px 15px 15px #000;
 }
 
@@ -492,7 +495,7 @@ body {
   height: 100%;
 }
 
-.x-out {
+.x-out_top-right {
   position: absolute;
   top: 1%;
   right: 1%;
@@ -502,11 +505,15 @@ body {
   cursor: pointer;
 }
 
-.x-out:hover {
-  top: 0.6%;
-  right: 0.6%;
-  /* width: 6%; */
-  width: 52px;
+.x-out_bottom {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
 }
 
 
@@ -985,6 +992,20 @@ body {
   }
 }
 
+/* SCREEN HEIGHT <= 450px */
+@media screen and (max-height: 450px) {
+
+  .nav-bar {
+    z-index: 9998;
+  }
+
+  .media-backdrop {
+    z-index: 9999;
+    top: 0;
+    height: 100%;
+  }
+}
+
 
 /* SCREEN HEIGHT <= 385px and WIDTH <= 1000px *********************/
 @media screen and (max-height: 385px) and (max-width: 1000px) {
@@ -997,7 +1018,6 @@ body {
   .nav-buttons::before {
     content: '';
     position: absolute;
-    width: 100%;
     height: 300px;
     z-index: -1;
   }

@@ -152,7 +152,7 @@ function displayPhotos(photos, numCols) {
 
 // Closes the video display if user clicks on the backdrop
 function closeMedia(event) {
-    if (!event.target.classList.contains("portfolio-photo")) {
+    if (!event.target.classList.contains("showcase-image")) {
         document.getElementById("mediaBackdrop").remove();
         document.body.style.overflowY = "auto";
     }
@@ -183,7 +183,7 @@ function showcaseImage(src, alt) {
 
     // Create X out
     const xOut = document.createElement("img");
-    xOut.classList.add("x-out");
+    xOut.classList.add("x-out_top-right");
     xOut.src = "images/xOut.svg";
 
     // Stack elements
