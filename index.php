@@ -16,6 +16,7 @@
     <!--IMask source link-->
     <script src="https://unpkg.com/imask"></script>
     <title>Scheer Drone Services</title>
+    <link rel="icon" type="image/png" href="images/LOGO_favicon.png">
   </head>
   <body>
     <!--HEADER-->
