@@ -7,7 +7,7 @@
 
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    require "db_connect_details.php";
+    require "db_config.php";
 
     // FORM DATA
     $fname = $_POST["fname"];
